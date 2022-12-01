@@ -15,7 +15,7 @@ fn parse_supplies(input: &str) -> Vec<u32> {
 
 impl AOC for Day01 {
     fn name(&self) -> &'static str {
-        "Day 01: Calorie Counting"
+        "(Day 1 - 2022): Calorie Counting"
     }
 
     fn part_a(&self) -> String {

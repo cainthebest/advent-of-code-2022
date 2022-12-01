@@ -1,13 +1,10 @@
-use crate::day01::{part_one, part_two};
-
-mod day01;
-
-fn day01() {
-    println!("---- Day 1 ----");
-    println!("Part 1: {}", part_one());
-    println!("Part 2: {}", part_two());
-}
+mod puzzles;
+mod util;
 
 fn main() {
-    day01();
+    for puzzle in puzzles::get_all() {
+        println!("Running puzzle: {}", puzzle.name());
+        println!("Part A: {}", puzzle.part_a());
+        println!("Part B: {}", puzzle.part_b());
+    }
 }

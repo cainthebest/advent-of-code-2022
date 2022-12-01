@@ -3,8 +3,15 @@ mod util;
 
 fn main() {
     for puzzle in puzzles::get_all() {
-        println!("Running puzzle: {}", puzzle.name());
-        println!("Part A: {}", puzzle.part_a());
-        println!("Part B: {}", puzzle.part_b());
+        println!(
+            "\x1b[93mRunning puzzle\x1b[0m: [ Year: {}, Name: {} ]",
+            puzzle.year(),
+            puzzle.name()
+        );
+        println!(
+            "\x1B[32mResult\x1b[0m: [ Part A: {}, Part B: {} ]",
+            puzzle.part_a(),
+            puzzle.part_b()
+        );
     }
 }

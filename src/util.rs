@@ -1,6 +1,7 @@
 use std::fs;
 pub trait AOC {
     fn name(&self) -> &'static str;
+    fn year(&self) -> u16;
     fn part_a(&self) -> String;
     fn part_b(&self) -> String;
 }

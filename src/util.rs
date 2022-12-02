@@ -1,4 +1,5 @@
 use std::fs;
+
 pub trait AOC {
     fn name(&self) -> &'static str;
     fn year(&self) -> u16;
@@ -22,7 +23,7 @@ pub fn load_data_file(year: u16, day: u8) -> String {
             _ => (),
     }
 
-    let path = format!("data/{:04}/{:02}.txt", year, day);
+    let path: String = format!("data/{:04}/{:02}.txt", year, day);
     fs::read_to_string(path)
         .unwrap_or_else(|_| panic!("Failed to load file for {:04}/{:02}", year, day))
 }
